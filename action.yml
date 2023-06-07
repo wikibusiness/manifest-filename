@@ -1,0 +1,13 @@
+name: 'manifest-filename'
+description: 'Sanitize a string for kubernetes names'
+inputs:
+  branch:
+    description: 'Branch'
+    required: true
+    default: ''
+outputs:
+  manifest: # id of output
+    description: 'Manifest file name'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
