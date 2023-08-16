@@ -9794,9 +9794,9 @@ const github = __nccwpck_require__(7811);
 
 try {
     const branch = core.getInput('branch');
-    let manifest = "manifests/application.yaml"
+    let manifest = "templates-default"
     if (branch.indexOf("release/") != -1 || branch.indexOf("release-") != -1 || branch.indexOf("develop") != -1) {
-        manifest = "manifests/application-stable.yaml"
+        manifest = "templates-stable"
     }
     core.setOutput("manifest", manifest);
     console.log(`The manifest: ${manifest}`);
